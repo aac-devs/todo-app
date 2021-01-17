@@ -1,0 +1,6 @@
+@import "./root.css";
+@import "./app.css";
+@import './general.css';
+@import "./todo-list.css";
+@import "./todo-form.css";
+@import "./todo-card.css";

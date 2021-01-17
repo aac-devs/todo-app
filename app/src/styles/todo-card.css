@@ -1,0 +1,72 @@
+:root {
+  --color-edit: #0d6efd;
+  --color-edit-hover: #0d55fd;
+  --color-complete: #198754;
+  --color-complete-hover: #06552d;
+  --color-remove: #dc3545;
+  --color-remove-hover: #ca3545;
+}
+
+.card {
+  min-width: 30rem;
+  width: 30rem;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card__button-edit {
+  border-color: var(--color-edit);
+  color: var(--color-edit);
+}
+
+.card__button-edit:hover {
+  color: #fff;
+  background-color: var(--color-edit-hover);
+}
+
+.card__button-complete {
+  border-color: var(--color-complete);
+  color: var(--color-complete);
+}
+
+.card__button-uncomplete {
+  border-color: var(--color-complete);
+  background-color: var(--color-complete);
+}
+
+.card__button-complete:hover {
+  color: #fff;
+  background-color: var(--color-complete-hover);
+}
+
+.card__button-uncomplete:hover {
+  color: #fff;
+  background-color: var(--color-complete-hover);
+}
+
+.card__button-remove {
+  border-color: var(--color-remove);
+  color: var(--color-remove);
+}
+
+.card__button-remove:hover {
+  color: #fff;
+  background-color: var(--color-remove-hover);
+}
