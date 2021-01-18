@@ -1,13 +1,15 @@
 :root {
   --color-button: #0d6efd;
   --color-button-hover: #0d55fd;
+  --color-button-cancel: #ffc107;
+  --color-button-cancel-hover: #ffa407;
 }
 
 .form__container {
   min-width: 30rem;
   max-width: 50rem;
   background-color: white;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   border: 1px solid lightgray;
   border-radius: 0.5rem;
 }
@@ -21,7 +23,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .form__title {
@@ -49,4 +51,39 @@
 .form__submit:hover {
   border-color: var(--color-button-hover);
   background-color: var(--color-button-hover);
+}
+
+.form__button-cancel {
+  margin: 0;
+  margin-top: 1rem;
+  color: black;
+  border-color: var(--color-button-cancel);
+  background-color: var(--color-button-cancel);
+}
+
+.form__button-cancel:hover {
+  border-color: var(--color-button-cancel-hover);
+  background-color: var(--color-button-cancel-hover);
+}
+
+.form__error {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid red;
+  color: red;
+  background-color: lightpink;
+  border-radius: 0.5rem;
+}
+
+.form__success {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid green;
+  color: green;
+  background-color: lightgreen;
+  border-radius: 0.5rem;
 }

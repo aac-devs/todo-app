@@ -1,10 +1,21 @@
 import React from "react";
 
-const TodoForm = ({ todo, changeTodoForm, handleAddEdit, cancelEditTodo }) => {
+const TodoForm = ({
+  todo,
+  changeTodoForm,
+  handleAddEdit,
+  cancelEditTodo,
+  error,
+  success,
+}) => {
   return (
     <div className="form__container">
       <h2 className="form__title">{todo.id ? "Edit to do" : "New to do"}</h2>
-      {todo.id && <button onClick={cancelEditTodo}>Cancel edit</button>}
+      {todo.id && (
+        <button className="button form__button-cancel" onClick={cancelEditTodo}>
+          Cancel edit
+        </button>
+      )}
       <form className="form" onSubmit={handleAddEdit}>
         <input
           className="form__todo-title"
@@ -28,6 +39,8 @@ const TodoForm = ({ todo, changeTodoForm, handleAddEdit, cancelEditTodo }) => {
           value={todo.id ? "Update to do" : "New to do"}
         />
       </form>
+      {error && <p className='form__error'>{error}</p>}
+      {success && <p className='form__success'>{success}</p>}
     </div>
   );
 };
