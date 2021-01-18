@@ -28,9 +28,9 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background-color: yellow;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin: 0;
 }
