@@ -1,4 +1,23 @@
-.list-container {
-  background-color: wheat;
+.list {
+  background-color: white;
   min-width: 30rem;
+  max-width: 50rem;
+  padding: 1rem 1rem 0 1rem;
+  flex-grow: 1;
+  margin-left: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .list {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.list__title {
+  text-align: center;
+  margin-bottom: 1rem;
 }

@@ -1,16 +1,18 @@
 import React from "react";
 import TodoCard from "./TodoCard";
 
-const TodoList = ({ todos, handleComplete, handleRemove }) => {
+const TodoList = ({ todos, handleButtonRemove, handleButtonComplete, handleButtonEdit }) => {
   return (
-    <div className="list-container">
+    <div className="list">
+      <h2 className='list__title'>To do list</h2>
       {todos &&
         todos.map((todo, index) => (
           <TodoCard
             key={index}
             todo={todo}
-            handleComplete={handleComplete}
-            handleRemove={handleRemove}
+            handleButtonComplete={handleButtonComplete}
+            handleButtonRemove={handleButtonRemove}
+            handleButtonEdit={handleButtonEdit}
           />
         ))}
     </div>

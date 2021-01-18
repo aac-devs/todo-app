@@ -1,6 +1,11 @@
 import React from "react";
 
-const TodoCard = ({ todo, handleComplete, handleRemove }) => {
+const TodoCard = ({
+  todo,
+  handleButtonEdit,
+  handleButtonComplete,
+  handleButtonRemove,
+}) => {
   return (
     <div className="card">
       <div className="card__header">
@@ -9,7 +14,7 @@ const TodoCard = ({ todo, handleComplete, handleRemove }) => {
           className={`button card__button-${
             todo.completed ? "uncomplete" : "complete"
           }`}
-          onClick={() => handleComplete(todo.id)}
+          onClick={() => handleButtonComplete(todo.id)}
         >
           {todo.completed ? "completed" : "uncomplete"}
         </button>
@@ -17,10 +22,15 @@ const TodoCard = ({ todo, handleComplete, handleRemove }) => {
       <p>{todo.description}</p>
       <hr></hr>
       <div className="card__buttons">
-        <button className="button card__button-edit">Edit</button>
+        <button
+          className="button card__button-edit"
+          onClick={() => handleButtonEdit(todo.id)}
+        >
+          Edit
+        </button>
         <button
           className="button card__button-remove"
-          onClick={() => handleRemove(todo.id)}
+          onClick={() => handleButtonRemove(todo.id)}
         >
           Remove
         </button>
